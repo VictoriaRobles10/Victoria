@@ -52,6 +52,9 @@ nav ul li a:hover{
     color:#38b56b;
 }
 
+/* ========================================== */
+/*  1. SLIDER DEL BANNER DE INICIO            */
+/* ========================================== */
 #inicio{
     height:100vh;
     position:relative;
@@ -64,19 +67,22 @@ nav ul li a:hover{
     height:100%;
 }
 
-.slide{
+/* Cambiado de .slide a .slide-banner */
+.slide-banner{
     position:absolute;
     width:100%;
     height:100%;
     opacity:0;
-    transition:opacity 1s;
+    transition:opacity 1s ease-in-out;
 }
 
-.slide.activo{
+/* Cambiado de .slide.activo a .slide-banner.activo */
+.slide-banner.activo{
     opacity:1;
 }
 
-.slide img{
+/* Cambiado de .slide img a .slide-banner img */
+.slide-banner img{
     width:100%;
     height:100%;
     object-fit:cover;
@@ -93,6 +99,7 @@ nav ul li a:hover{
     background:rgba(0,0,0,.45);
     color:white;
     text-align:center;
+    z-index:2; /* Asegura que el texto quede por encima de las imágenes */
 }
 
 .texto-principal h1{
@@ -118,6 +125,9 @@ nav ul li a:hover{
     background:#2b9658;
 }
 
+/* ========================================== */
+/*  SECCIONES GENERALES Y CONTENIDO           */
+/* ========================================== */
 section{
     padding:90px 10%;
 }
@@ -183,6 +193,46 @@ h2{
     font-size:55px;
 }
 
+/* ========================================== */
+/*  2. CARRUSEL DE LA GALERÍA AMBIENTAL       */
+/* ========================================== */
+.galeria {
+    text-align: center;
+    padding: 90px 10%; /* Lo igualé al padding de las otras secciones */
+}
+
+.carrusel {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    height: 450px; /* Le di un poquito más de altura para que luzca */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.15);
+}
+
+/* Cambiado de .slide a .slide-galeria e implementado con opacidad para transiciones suaves */
+.slide-galeria {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Cambiado de .slide.activo a .slide-galeria.activo */
+.slide-galeria.activo {
+    opacity: 1;
+    position: relative; /* Evita que colapsen las alturas */
+}
+
+/* ========================================== */
+/*  CONTACTO, MAPA Y REQUISITOS FINALES       */
+/* ========================================== */
 .contacto{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -245,53 +295,36 @@ footer{
     align-items:center;
     font-size:34px;
     text-decoration:none;
+    z-index:1000; /* Para que quede siempre por encima de todo */
 }
 
+/* ========================================== */
+/*  RESPONSIVE / DISEÑO ADAPTABLE             */
+/* ========================================== */
 @media(max-width:900px){
 
-nav{
-    flex-direction:column;
-}
+    nav{
+        flex-direction:column;
+    }
 
-nav ul{
-    margin-top:15px;
-}
+    nav ul{
+        margin-top:15px;
+    }
 
-.texto-principal h1{
-    font-size:38px;
-}
+    .texto-principal h1{
+        font-size:38px;
+    }
 
-.contacto{
-    grid-template-columns:1fr;
-}
+    .contacto{
+        grid-template-columns:1fr;
+    }
 
-.numeros{
-    flex-direction:column;
-    gap:40px;
-}
+    .numeros{
+        flex-direction:column;
+        gap:40px;
+    }
 
-}
-.galeria {
-    text-align: center;
-    padding: 40px;
-}
-
-.carrusel {
-    width: 90%;
-    max-width: 900px;
-    height: 400px;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 20px;
-}
-
-.slide {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    display: none;
-}
-
-.slide.activo {
-    display: block;
+    .carrusel {
+        height: 300px; /* Más pequeño en pantallas móviles */
+    }
 }
