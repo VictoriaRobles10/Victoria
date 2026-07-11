@@ -271,3 +271,27 @@ nav ul{
 }
 
 }
+.galeria {
+    text-align: center;
+    padding: 40px;
+}
+
+.carrusel {
+    width: 90%;
+    max-width: 900px;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.slide {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: none;
+}
+
+.slide.activo {
+    display: block;
+}
