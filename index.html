@@ -12,8 +12,13 @@
 
 <header>
     <nav>
-        <div class="logo">
-            <h2>M&M</h2>
+        <!-- CONTENEDOR DEL LOGO (Configurado con L mayúscula) -->
+        <div class="logo-container">
+            <a href="#inicio">
+                <!-- Se cambió a Logo.png para que coincida exactamente con tu archivo -->
+                <img src="Imagenes/Logo.png" onerror="this.style.display='none'; document.getElementById('logo-texto').style.display='block';" alt="M&M Logo" class="logo-img">
+                <h2 id="logo-texto" style="display:none; color:white; margin:0;">M&M</h2>
+            </a>
         </div>
         <ul>
             <li><a href="#inicio">Inicio</a></li>
@@ -24,7 +29,6 @@
     </nav>
 
     <section id="inicio">
-        <!-- Slider de Banner principal con sistema de seguridad anti-pantalla-negra -->
         <div class="slider">
             <div class="slide-banner activo">
                 <img src="Imagenes/banner1.jpg" 
@@ -62,44 +66,38 @@
 <section class="mision">
     <div class="contenedor">
         <h2>Misión</h2>
-        <p>Brindar asistencia técnica especializada para la gestión ambiental, realizando monitoreos, estudios de impacto, evaluaciones ambientales y asesoramiento permanente.</p>
+        <p>Brindar asistencia técnica especializada para la gestión ambiental, realizando monitoreos, estudios de impacto, evaluations ambientales y asesoramiento permanente.</p>
     </div>
 </section>
 
 <section id="servicios">
     <h2>Nuestros Servicios</h2>
     <div class="cards">
-        <!-- Tarjeta 1: Atmósfera -->
         <div class="card">
             <i class="fa-solid fa-wind"></i>
             <h3>Atmósfera</h3>
             <p class="servicio-desc">Realizamos estudios analíticos de calidad de aire, muestreos de emisiones gaseosas industriales y mediciones de material particulado bajo normativas vigentes para mitigar el impacto ambiental.</p>
         </div>
-        <!-- Tarjeta 2: Aguas -->
         <div class="card">
             <i class="fa-solid fa-droplet"></i>
             <h3>Aguas</h3>
             <p class="servicio-desc">Análisis integral de aguas subterráneas y superficiales. Ensayos de potabilidad, control microbiológico y optimización de vuelco de efluentes líquidos industriales según parámetros legales.</p>
         </div>
-        <!-- Tarjeta 3: Ruido -->
         <div class="card">
             <i class="fa-solid fa-volume-high"></i>
             <h3>Ruido</h3>
             <p class="servicio-desc">Elaboración de mapas de ruido ambiental y laboral, evaluaciones de contaminación acústica vecinal y diseño de barreras de mitigación sonora para establecimientos urbanos e industriales.</p>
         </div>
-        <!-- Tarjeta 4: Suelos -->
         <div class="card">
             <i class="fa-solid fa-seedling"></i>
             <h3>Suelos</h3>
             <p class="servicio-desc">Muestreo sistemático y caracterización química de perfiles de suelo. Diagnóstico de terrenos contaminados, planes de remediación ambiental e ingeniería de conservación.</p>
         </div>
-        <!-- Tarjeta 5: Ambiente Laboral -->
         <div class="card">
             <i class="fa-solid fa-industry"></i>
             <h3>Ambiente Laboral</h3>
             <p class="servicio-desc">Evaluaciones ambientales en puestos de trabajo: iluminación, carga térmica, ergonomía y agentes químicos suspendidos, garantizando la salud del personal y cumplimiento legal.</p>
         </div>
-        <!-- Tarjeta 6: Residuos -->
         <div class="card">
             <i class="fa-solid fa-recycle"></i>
             <h3>Residuos</h3>
@@ -116,16 +114,11 @@
 
 <section id="galeria" class="galeria">
     <h2>Galería Ambiental</h2>
-    <!-- Carrusel de Galería con sistema de rescate de imágenes -->
     <div class="carrusel">
-        <img src="Imagenes/ambiente1.jpg" class="slide-galeria activo" alt="Ambiente 1" 
-             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900';">
-        <img src="Imagenes/ambiente2.jpg" class="slide-galeria" alt="Ambiente 2" 
-             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=900';">
-        <img src="Imagenes/ambiente3.jpg" class="slide-galeria" alt="Ambiente 3" 
-             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=900';">
-        <img src="Imagenes/ambiente4.jpg" class="slide-galeria" alt="Ambiente 4" 
-             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1472214222541-d510753a8707?w=900';">
+        <img src="Imagenes/ambiente1.jpg" class="slide-galeria activo" alt="Ambiente 1" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900';">
+        <img src="Imagenes/ambiente2.jpg" class="slide-galeria" alt="Ambiente 2" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=900';">
+        <img src="Imagenes/ambiente3.jpg" class="slide-galeria" alt="Ambiente 3" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=900';">
+        <img src="Imagenes/ambiente4.jpg" class="slide-galeria" alt="Ambiente 4" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1472214222541-d510753a8707?w=900';">
     </div>
 </section>
 
@@ -133,6 +126,8 @@
     <h2>Contacto</h2>
     <div class="contacto">
         <div class="info">
+            <!-- SEGUNDO LOGO TAMBIÉN CON L MAYÚSCULA -->
+            <img src="Imagenes/Logo.png" onerror="this.style.display='none';" alt="M&M Logo Comercial" class="logo-contacto-img">
             <h3>Información Comercial</h3>
             <p><i class="fa-solid fa-location-dot"></i> Italia 67 - Piso 3 - San Nicolás de los Arroyos</p>
             <p><i class="fa-solid fa-phone"></i> +54 9 336 4103585</p>
